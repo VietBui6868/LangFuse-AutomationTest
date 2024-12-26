@@ -1,0 +1,99 @@
+{
+  "cookies": [
+    {
+      "name": "__Secure-next-auth.csrf-token.EU",
+      "value": "45aff8a97549d64d812309a246bcd87cc86655d38d181e76c3a69fd406361b72%7C55e73095a5a3fce1277e8c7ae29d2e774188336f55bf2da5ef77752e0699e811",
+      "domain": ".langfuse.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "cf_clearance",
+      "value": "NLRxsUSLvwx5roVD720lWTey.gA9jBF6VlsAnScfmeE-1735202726-1.2.1.1-JEXX9aKBohRW6_JPoY4LbthdNRRIYqqlAVdYrkrEQrOTalKPr.nBkwfeepPgbqutZdDXuryTGZxH5WgzlfE0GJitoEfpCXjMr7QA1RAvub4O9NJtwvqTVliZc9NyfPaYmgeaqiT163OHNDRPC7pRnq.7JCuEFYc5gIdYiNWHFLIzSbexQhl9yYAS0lxhzRNJ4JkwxDWPHIXcT3I3NW3O7cAMmopabGdoV6b_kMUGHk_1QZx.UZyBS4zss8DhvyRgAmBp5EYLgTniNJoPT3vCJdqMzLObA6DYyFBY5ybdlnfzinW8fcBwKzFc3yGfpGni45TB4WWQnFh0NbBFqXUQrMdCgyw1bYWX8Q08sArIXSXtsdhdvkCDF7MV_jY6TTt8ZuPSrNp9fubF.vjmmSLkGA",
+      "domain": ".langfuse.com",
+      "path": "/",
+      "expires": 1766738701.9092,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "crisp-client%2Fsession%2F6da9ed41-79e1-4d55-9fbe-e168e371a47d",
+      "value": "session_82559684-08f4-46ff-b27f-57bacc24ec5b",
+      "domain": ".langfuse.com",
+      "path": "/",
+      "expires": 1750970704,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-next-auth.callback-url.EU",
+      "value": "https%3A%2F%2Fcloud.langfuse.com%2F",
+      "domain": ".langfuse.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ph_phc_zkMwFajk8ehObUlMth0D7DtPItFnxETi3lmSvyQDrwB_posthog",
+      "value": "%7B%22distinct_id%22%3A%22cm4m3t1dq00i461xwxo0jb5yh%22%2C%22%24sesid%22%3A%5Bnull%2C%2201940224-06d2-7772-ae16-c15867440659%22%2C1735202703058%5D%2C%22%24epp%22%3Atrue%7D",
+      "domain": ".langfuse.com",
+      "path": "/",
+      "expires": 1766738707,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-next-auth.session-token.EU",
+      "value": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..AsKxaA_U_I9uuViq.fqUAABn8oUy4qXr3mUn811SWHgJO6O0SNQbBJjnWP-6pzPi6yzccPdoOYqZvN5mLwYN9Z0h4-4elbBhT3fSw-oi2VG4NUPwyelW7TfASHEyQM03yHBiVGNOKuLRlCmbQ2Um4T6VNi1nFv56sQdpkT1d2KXGxCf_ARB5rM16zFabgXXb0DqgsINDOD5sgSSmy45jakBeFajxN-rabha-rA9rUvHqIhIRbyy_f1-yEMTrU.gafzs7Gr3pZfMfEqaj-Qlg",
+      "domain": ".langfuse.com",
+      "path": "/",
+      "expires": 1737794707.975097,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://cloud.langfuse.com",
+      "localStorage": [
+        {
+          "name": "crisp-client/session/6da9ed41-79e1-4d55-9fbe-e168e371a47d",
+          "value": "session_82559684-08f4-46ff-b27f-57bacc24ec5b"
+        },
+        {
+          "name": "nextauth.message",
+          "value": "{\"event\":\"session\",\"data\":{\"trigger\":\"getSession\"},\"timestamp\":1735202702}"
+        },
+        {
+          "name": "shouldRenderMarkdown",
+          "value": "true"
+        },
+        {
+          "name": "dismissed-sidebar-notifications",
+          "value": "[]"
+        },
+        {
+          "name": "crisp-client/session/6da9ed41-79e1-4d55-9fbe-e168e371a47d:e",
+          "value": "1735218472708"
+        },
+        {
+          "name": "ph_phc_zkMwFajk8ehObUlMth0D7DtPItFnxETi3lmSvyQDrwB_posthog",
+          "value": "{\"$user_state\":\"identified\",\"$sesid\":[null,\"01940224-06d2-7772-ae16-c15867440659\",1735202703058],\"distinct_id\":\"cm4m3t1dq00i461xwxo0jb5yh\",\"$device_id\":\"0193ff51-a61d-71eb-97e7-b7693741b7dc\",\"$groups\":{\"emailDomain\":\"gmail.com\",\"project\":\"clkpwwm0m000gmm094odg11gi\"},\"$client_session_props\":{\"sessionId\":\"01940224-06d2-7772-ae16-c15867440659\",\"props\":{\"initialPathName\":\"/auth/sign-in\",\"referringDomain\":\"$direct\",\"utm_source\":null,\"utm_medium\":null,\"utm_campaign\":null,\"utm_content\":null,\"utm_term\":null,\"gclid\":null,\"gad_source\":null,\"gclsrc\":null,\"dclid\":null,\"gbraid\":null,\"wbraid\":null,\"fbclid\":null,\"msclkid\":null,\"twclid\":null,\"li_fat_id\":null,\"mc_cid\":null,\"igshid\":null,\"ttclid\":null,\"rdt_cid\":null}},\"$session_is_sampled\":null,\"$session_recording_enabled_server_side\":true,\"$console_log_recording_enabled_server_side\":true,\"$session_recording_network_payload_capture\":{\"capturePerformance\":{\"network_timing\":true,\"web_vitals\":false,\"web_vitals_allowed_metrics\":null},\"recordBody\":true,\"recordHeaders\":true},\"$session_recording_canvas_recording\":{},\"$replay_sample_rate\":0.1,\"$replay_minimum_duration\":15000,\"$active_feature_flags\":[],\"$enabled_feature_flags\":{},\"$feature_flag_payloads\":{},\"$epp\":true,\"$user_id\":\"cm4m3t1dq00i461xwxo0jb5yh\",\"$stored_person_properties\":{\"environment\":\"production\",\"email\":\"albumavae@gmail.com\",\"name\":\"Viet Bui\",\"featureFlags\":{\"templateFlag\":false,\"excludeClickhouseRead\":false},\"projects\":[{\"id\":\"clkpwwm0m000gmm094odg11gi\",\"name\":\"langfuse-docs\",\"role\":\"VIEWER\",\"deletedAt\":null,\"organization\":{\"id\":\"oclkpwwm0m000gmm094odg11gi\",\"name\":\"Langfuse Demo\",\"role\":\"VIEWER\",\"cloudConfig\":{\"plan\":\"Pro\"},\"projects\":[{\"id\":\"clkpwwm0m000gmm094odg11gi\",\"name\":\"langfuse-docs\",\"role\":\"VIEWER\",\"deletedAt\":null}],\"plan\":\"cloud:pro\"}}],\"LANGFUSE_CLOUD_REGION\":\"EU\"},\"$stored_group_properties\":{\"emailDomain\":{\"domain\":\"gmail.com\"},\"project\":{}}}"
+        },
+        {
+          "name": "useClickhouseQueries",
+          "value": "false"
+        }
+      ]
+    }
+  ]
+}
