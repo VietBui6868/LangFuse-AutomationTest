@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [22.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    - run: npx playwright install
+    - name: Executing TDD Automation test
+      run: npm run test
+      continue-on-error: true
+    - name: Generating report
+      run: npm run report
+    - name: Upload report artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: report
+        path: reports/report.zip
+    - name: Send report to Teams
+      run: |
+        WEBHOOK_URL="${{ secrets.TEAMS_WEBHOOK_URL }}"
+        TRIGGER_TYPE="${{ github.event_name }}"
+        COMMIT_MESSAGE="${{ github.event.head_commit.message }}"
+        ARTIFACT_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+        curl -H "Content-Type: application/json" -d "{
+          \"text\": \"<h2>Build Report</h2>
+                   <p><strong>Action:</strong> ${TRIGGER_TYPE}</p>
+                   <p><strong>Commit:</strong> ${COMMIT_MESSAGE}</p>
+                   <p><a href='${ARTIFACT_URL}'>See more details</a></p>\"
+        }" $WEBHOOK_URL
