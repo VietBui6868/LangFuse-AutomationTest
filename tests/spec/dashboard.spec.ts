@@ -1,7 +1,7 @@
 import test from "@playwright/test";
 import { dashboardActions } from "../action/dashboard_action";
 import { loginAction } from '../action/login_action';
-import { TEST_ENV } from "../../testSites/Sites";
+import { TEST_ENV } from "../../testSites/sites";
 import { Logger } from "../lib/logger";
 import path from 'path'
 import { common } from "../lib/common";
