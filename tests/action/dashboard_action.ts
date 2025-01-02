@@ -1,7 +1,7 @@
 import { Page } from "@playwright/test";
 import { dashBoard_ob } from "../pageObjects/dashboard_ob";
 import { lib } from "../lib/lib";
-import { convertToCustomDate } from "../lib/common";
+import { common } from "../lib/common";
 
 const dashboardLocators = new dashBoard_ob();
 
@@ -124,8 +124,8 @@ export const dashboardActions = {
     },
 
     async validateDateRangeSelected(page: Page, startTime: any, startDate : number, startMonth : string, startYear : string, endTime : any, endDate : number, endMonth : string, endYear: string){
-        const startMoment = convertToCustomDate(startYear, startMonth, Number(startDate),startTime.hours, startTime.minutes, startTime.ampm);
-        const endMoment = convertToCustomDate(endYear, endMonth, Number(endDate),endTime.hours, endTime.minutes, endTime.ampm);
+        const startMoment = common.convertToCustomDate(startYear, startMonth, Number(startDate),startTime.hours, startTime.minutes, startTime.ampm);
+        const endMoment = common.convertToCustomDate(endYear, endMonth, Number(endDate),endTime.hours, endTime.minutes, endTime.ampm);
         const expecteTitle = `${startMoment} - ${endMoment}`
         lib.validateElementText(page, dashboardLocators.filterByDateButton, expecteTitle);
     }

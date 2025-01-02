@@ -1,8 +1,18 @@
 {
   "cookies": [
     {
+      "name": "cf_clearance",
+      "value": "3TKyutW0PYw0ct.SEcTwHKTUEPAQKlSVgvNEnk.3n74-1735780989-1.2.1.1-qsQ2s9ieNBkEe.v7pHB7IOfWA51OKEkxvrDiNz2tCokwWX4n3ZXIe2e3694mtnRkYj3y.JewCy_f9M7n5qxHZ0CvQZ7Yw5YLt170UlK6VHqvJU1Zg1YxT0h4FnxR_O7hOK8Cq0c0lfIOXxGkbRh8R9hkJOSUFkfWzBS_23lslmPCgYhVW_aIrV9Zy6SiuV3rTLYtmynvjXF3nOpoZ08_clPW.5xQ.RQBkl6WIC5.fQ7dWdpBlSZ3LTaEL2zOZFasvb3aJpO8siYNINTCfVJCGn7oHtuxGFno0iicATP4T1u6JkD_2Iv7RsmK6IVkHxlcSjFdjwaTAg84SN9yQI5MyZpfOoH3zI9w5._OAfw1_xVhkiCVpNF2vxAqu5X5I4qTR.KjfSc.QNYyIQh5cUXgBQ",
+      "domain": ".langfuse.com",
+      "path": "/",
+      "expires": 1767316957.13358,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
       "name": "__Secure-next-auth.csrf-token.EU",
-      "value": "45aff8a97549d64d812309a246bcd87cc86655d38d181e76c3a69fd406361b72%7C55e73095a5a3fce1277e8c7ae29d2e774188336f55bf2da5ef77752e0699e811",
+      "value": "13aa150a307cb8297263b0b4a98c2121e07d245fc1072babf6263831c0ea0f66%7C1888a36ad390ab20cfcfb00303d54efe964154deb905af1bc67d151da80d3803",
       "domain": ".langfuse.com",
       "path": "/",
       "expires": -1,
@@ -11,21 +21,11 @@
       "sameSite": "Lax"
     },
     {
-      "name": "cf_clearance",
-      "value": "NLRxsUSLvwx5roVD720lWTey.gA9jBF6VlsAnScfmeE-1735202726-1.2.1.1-JEXX9aKBohRW6_JPoY4LbthdNRRIYqqlAVdYrkrEQrOTalKPr.nBkwfeepPgbqutZdDXuryTGZxH5WgzlfE0GJitoEfpCXjMr7QA1RAvub4O9NJtwvqTVliZc9NyfPaYmgeaqiT163OHNDRPC7pRnq.7JCuEFYc5gIdYiNWHFLIzSbexQhl9yYAS0lxhzRNJ4JkwxDWPHIXcT3I3NW3O7cAMmopabGdoV6b_kMUGHk_1QZx.UZyBS4zss8DhvyRgAmBp5EYLgTniNJoPT3vCJdqMzLObA6DYyFBY5ybdlnfzinW8fcBwKzFc3yGfpGni45TB4WWQnFh0NbBFqXUQrMdCgyw1bYWX8Q08sArIXSXtsdhdvkCDF7MV_jY6TTt8ZuPSrNp9fubF.vjmmSLkGA",
-      "domain": ".langfuse.com",
-      "path": "/",
-      "expires": 1766738701.9092,
-      "httpOnly": true,
-      "secure": true,
-      "sameSite": "None"
-    },
-    {
       "name": "crisp-client%2Fsession%2F6da9ed41-79e1-4d55-9fbe-e168e371a47d",
-      "value": "session_82559684-08f4-46ff-b27f-57bacc24ec5b",
+      "value": "session_a982d535-e412-454f-a7b5-be2ffa102d4f",
       "domain": ".langfuse.com",
       "path": "/",
-      "expires": 1750970704,
+      "expires": 1751548959,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -42,20 +42,20 @@
     },
     {
       "name": "ph_phc_zkMwFajk8ehObUlMth0D7DtPItFnxETi3lmSvyQDrwB_posthog",
-      "value": "%7B%22distinct_id%22%3A%22cm4m3t1dq00i461xwxo0jb5yh%22%2C%22%24sesid%22%3A%5Bnull%2C%2201940224-06d2-7772-ae16-c15867440659%22%2C1735202703058%5D%2C%22%24epp%22%3Atrue%7D",
+      "value": "%7B%22distinct_id%22%3A%22cm4m3t1dq00i461xwxo0jb5yh%22%2C%22%24sesid%22%3A%5B1735780958674%2C%220194249b-8066-7c52-a067-eb0314421892%22%2C1735780958310%5D%2C%22%24epp%22%3Atrue%7D",
       "domain": ".langfuse.com",
       "path": "/",
-      "expires": 1766738707,
+      "expires": 1767316960,
       "httpOnly": false,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "__Secure-next-auth.session-token.EU",
-      "value": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..AsKxaA_U_I9uuViq.fqUAABn8oUy4qXr3mUn811SWHgJO6O0SNQbBJjnWP-6pzPi6yzccPdoOYqZvN5mLwYN9Z0h4-4elbBhT3fSw-oi2VG4NUPwyelW7TfASHEyQM03yHBiVGNOKuLRlCmbQ2Um4T6VNi1nFv56sQdpkT1d2KXGxCf_ARB5rM16zFabgXXb0DqgsINDOD5sgSSmy45jakBeFajxN-rabha-rA9rUvHqIhIRbyy_f1-yEMTrU.gafzs7Gr3pZfMfEqaj-Qlg",
+      "value": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..jg-BJUTmpqmTZcvx.C1Eq9Ts5NxGr1tztH2lfW4CRcZza163D4EKyFDl0AHPGi9dhJhwKZuBACz431uyNMEY4vUhs9zsyi8UC62DKmIu3NnFcoGjVA-p5yPBm87icK1DW08EigEif51zViv6bAQox1mIpZBCoV3gJBJH5iEFFiw0V19EtHaS2qjqSIePaCgMASIC9DMY9RnCbw0NqSvBWvrgugrhf7WenM9zRgv8kGwTCAzaHTLJQgDSzZIUH.SBsLeOICTlmcZ1z8zgdHcA",
       "domain": ".langfuse.com",
       "path": "/",
-      "expires": 1737794707.975097,
+      "expires": 1738372960.462854,
       "httpOnly": true,
       "secure": true,
       "sameSite": "Lax"
@@ -66,12 +66,16 @@
       "origin": "https://cloud.langfuse.com",
       "localStorage": [
         {
-          "name": "crisp-client/session/6da9ed41-79e1-4d55-9fbe-e168e371a47d",
-          "value": "session_82559684-08f4-46ff-b27f-57bacc24ec5b"
+          "name": "nextauth.message",
+          "value": "{\"event\":\"session\",\"data\":{\"trigger\":\"getSession\"},\"timestamp\":1735780957}"
         },
         {
-          "name": "nextauth.message",
-          "value": "{\"event\":\"session\",\"data\":{\"trigger\":\"getSession\"},\"timestamp\":1735202702}"
+          "name": "crisp-client/session/6da9ed41-79e1-4d55-9fbe-e168e371a47d",
+          "value": "session_a982d535-e412-454f-a7b5-be2ffa102d4f"
+        },
+        {
+          "name": "useClickhouseQueries",
+          "value": "false"
         },
         {
           "name": "shouldRenderMarkdown",
@@ -82,16 +86,12 @@
           "value": "[]"
         },
         {
-          "name": "crisp-client/session/6da9ed41-79e1-4d55-9fbe-e168e371a47d:e",
-          "value": "1735218472708"
-        },
-        {
           "name": "ph_phc_zkMwFajk8ehObUlMth0D7DtPItFnxETi3lmSvyQDrwB_posthog",
-          "value": "{\"$user_state\":\"identified\",\"$sesid\":[null,\"01940224-06d2-7772-ae16-c15867440659\",1735202703058],\"distinct_id\":\"cm4m3t1dq00i461xwxo0jb5yh\",\"$device_id\":\"0193ff51-a61d-71eb-97e7-b7693741b7dc\",\"$groups\":{\"emailDomain\":\"gmail.com\",\"project\":\"clkpwwm0m000gmm094odg11gi\"},\"$client_session_props\":{\"sessionId\":\"01940224-06d2-7772-ae16-c15867440659\",\"props\":{\"initialPathName\":\"/auth/sign-in\",\"referringDomain\":\"$direct\",\"utm_source\":null,\"utm_medium\":null,\"utm_campaign\":null,\"utm_content\":null,\"utm_term\":null,\"gclid\":null,\"gad_source\":null,\"gclsrc\":null,\"dclid\":null,\"gbraid\":null,\"wbraid\":null,\"fbclid\":null,\"msclkid\":null,\"twclid\":null,\"li_fat_id\":null,\"mc_cid\":null,\"igshid\":null,\"ttclid\":null,\"rdt_cid\":null}},\"$session_is_sampled\":null,\"$session_recording_enabled_server_side\":true,\"$console_log_recording_enabled_server_side\":true,\"$session_recording_network_payload_capture\":{\"capturePerformance\":{\"network_timing\":true,\"web_vitals\":false,\"web_vitals_allowed_metrics\":null},\"recordBody\":true,\"recordHeaders\":true},\"$session_recording_canvas_recording\":{},\"$replay_sample_rate\":0.1,\"$replay_minimum_duration\":15000,\"$active_feature_flags\":[],\"$enabled_feature_flags\":{},\"$feature_flag_payloads\":{},\"$epp\":true,\"$user_id\":\"cm4m3t1dq00i461xwxo0jb5yh\",\"$stored_person_properties\":{\"environment\":\"production\",\"email\":\"albumavae@gmail.com\",\"name\":\"Viet Bui\",\"featureFlags\":{\"templateFlag\":false,\"excludeClickhouseRead\":false},\"projects\":[{\"id\":\"clkpwwm0m000gmm094odg11gi\",\"name\":\"langfuse-docs\",\"role\":\"VIEWER\",\"deletedAt\":null,\"organization\":{\"id\":\"oclkpwwm0m000gmm094odg11gi\",\"name\":\"Langfuse Demo\",\"role\":\"VIEWER\",\"cloudConfig\":{\"plan\":\"Pro\"},\"projects\":[{\"id\":\"clkpwwm0m000gmm094odg11gi\",\"name\":\"langfuse-docs\",\"role\":\"VIEWER\",\"deletedAt\":null}],\"plan\":\"cloud:pro\"}}],\"LANGFUSE_CLOUD_REGION\":\"EU\"},\"$stored_group_properties\":{\"emailDomain\":{\"domain\":\"gmail.com\"},\"project\":{}}}"
+          "value": "{\"$user_state\":\"identified\",\"$sesid\":[1735780958674,\"0194249b-8066-7c52-a067-eb0314421892\",1735780958310],\"distinct_id\":\"cm4m3t1dq00i461xwxo0jb5yh\",\"$device_id\":\"0194249b-7aed-73d2-a3c0-1cc7f97fe58e\",\"$groups\":{\"emailDomain\":\"gmail.com\",\"project\":\"clkpwwm0m000gmm094odg11gi\"},\"$client_session_props\":{\"sessionId\":\"0194249b-8066-7c52-a067-eb0314421892\",\"props\":{\"initialPathName\":\"/auth/sign-in\",\"referringDomain\":\"$direct\",\"utm_source\":null,\"utm_medium\":null,\"utm_campaign\":null,\"utm_content\":null,\"utm_term\":null,\"gclid\":null,\"gad_source\":null,\"gclsrc\":null,\"dclid\":null,\"gbraid\":null,\"wbraid\":null,\"fbclid\":null,\"msclkid\":null,\"twclid\":null,\"li_fat_id\":null,\"mc_cid\":null,\"igshid\":null,\"ttclid\":null,\"rdt_cid\":null}},\"$session_recording_enabled_server_side\":true,\"$console_log_recording_enabled_server_side\":true,\"$session_recording_network_payload_capture\":{\"capturePerformance\":{\"network_timing\":true,\"web_vitals\":false,\"web_vitals_allowed_metrics\":null},\"recordBody\":true,\"recordHeaders\":true},\"$session_recording_canvas_recording\":{},\"$replay_sample_rate\":0.1,\"$replay_minimum_duration\":15000,\"$session_is_sampled\":false,\"$active_feature_flags\":[],\"$enabled_feature_flags\":{},\"$feature_flag_payloads\":{},\"$epp\":true,\"$user_id\":\"cm4m3t1dq00i461xwxo0jb5yh\",\"$stored_person_properties\":{\"environment\":\"production\",\"email\":\"albumavae@gmail.com\",\"name\":\"Viet Bui\",\"featureFlags\":{\"templateFlag\":false,\"excludeClickhouseRead\":false},\"projects\":[{\"id\":\"clkpwwm0m000gmm094odg11gi\",\"name\":\"langfuse-docs\",\"role\":\"VIEWER\",\"deletedAt\":null,\"organization\":{\"id\":\"oclkpwwm0m000gmm094odg11gi\",\"name\":\"Langfuse Demo\",\"role\":\"VIEWER\",\"cloudConfig\":{\"plan\":\"Pro\"},\"projects\":[{\"id\":\"clkpwwm0m000gmm094odg11gi\",\"name\":\"langfuse-docs\",\"role\":\"VIEWER\",\"deletedAt\":null}],\"plan\":\"cloud:pro\"}}],\"LANGFUSE_CLOUD_REGION\":\"EU\"},\"$stored_group_properties\":{\"emailDomain\":{\"domain\":\"gmail.com\"},\"project\":{}}}"
         },
         {
-          "name": "useClickhouseQueries",
-          "value": "false"
+          "name": "crisp-client/session/6da9ed41-79e1-4d55-9fbe-e168e371a47d:e",
+          "value": "1735796727031"
         }
       ]
     }

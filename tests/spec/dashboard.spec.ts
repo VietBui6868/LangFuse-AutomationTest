@@ -1,11 +1,32 @@
 import test from "@playwright/test";
 import { dashboardActions } from "../action/dashboard_action";
+import { loginAction } from '../action/login_action';
 import { TEST_ENV } from "../../testSites/Sites";
 import { Logger } from "../lib/logger";
+import path from 'path'
+import { common } from "../lib/common";
+
+const authFile = path.join(__dirname, '../../Authentication/.auth/user.json');
 
 test.beforeEach(async ({page}) => {
+    if(common.isFileBlank(authFile)) {
+        Logger.step('Navigate to the login page')
+        await loginAction.navigateToLoginPage(page, TEST_ENV.PRODUCTION.url)
+        Logger.step("Enter user's information to login")
+        await loginAction.Login(TEST_ENV.PRODUCTION.email, TEST_ENV.PRODUCTION.password, page)
+        Logger.step("Waiting for dashboard page display")
+        // End of authentication steps.
+        await dashboardActions.validateDashboardPageDisplay(page, TEST_ENV.PRODUCTION.url);
+        Logger.step("Save authentication state to file");
+        await page.context().storageState({ path: authFile });
+    }
+    else {
+        Logger.log('Authentication file already exists. Skip this step');
+    }
+
     Logger.step("Navigate to dashboard page");
     await dashboardActions.navigateToDashboardPage(page, TEST_ENV.PRODUCTION.url);
+    
 });
 
 test("Verify filter time field in dashboard page work correctly", async ({ page }) => {
