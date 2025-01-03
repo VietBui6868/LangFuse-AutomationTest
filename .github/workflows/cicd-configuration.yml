@@ -34,11 +34,6 @@ jobs:
       with:
         name: report
         path: playwright-report/index.html
-    - name: Upload test result artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: report
-        path: test-results/.last_run.json
     - name: Send report to Teams
       run: |
         WEBHOOK_URL="${{ secrets.TEAMS_WEBHOOK_URL }}"
