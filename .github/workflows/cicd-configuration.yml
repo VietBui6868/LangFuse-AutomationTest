@@ -45,9 +45,14 @@ jobs:
         TRIGGER_TYPE="${{ github.event_name }}"
         COMMIT_MESSAGE="${{ github.event.head_commit.message }}"
         ARTIFACT_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
+        # Read the test result status from the JSON file
+        TEST_STATUS=$(jq -r '.status' test-results/.last-run.json)
+
         curl -H "Content-Type: application/json" -d "{
           \"text\": \"<h2>Build Report</h2>
                    <p><strong>Action:</strong> ${TRIGGER_TYPE}</p>
                    <p><strong>Commit:</strong> ${COMMIT_MESSAGE}</p>
+                   <p><strong>Status:</strong> ${TEST_STATUS}</p>
                    <p><a href='${ARTIFACT_URL}'>See more details</a></p>\"
         }" $WEBHOOK_URL
