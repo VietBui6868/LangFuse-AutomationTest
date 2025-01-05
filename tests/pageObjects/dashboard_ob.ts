@@ -29,62 +29,62 @@ export class dashBoard_ob {
 
    constructor() {
    //Dashboard title
-   this.dashboardTitle = '//*[@id="__next"]/div/div/main/main/div/div[1]/div[2]/div[1]/div/h2'
+   this.dashboardTitle = '//h2[normalize-space()="Dashboard"]'
 
    //Filter by date button
-   this.filterByDateButton =  '(//*[@id="date"])[1]'
+   this.filterByDateButton =  '//div[@data-sentry-component="DatePickerWithRange"]/button[@data-sentry-source-file="date-picker.tsx"]'
 
    //Date picker popup
-   this.datePickerPopup = '/html/body/div[3]'
+   this.datePickerPopup = '//div[@data-sentry-source-file="date-picker.tsx" and @data-sentry-element="PopoverContent"]'
 
    //Start time
    this.startTime = {
-      hours: '(//*[@id="12hours"])[1]',
-      minutes: '(//*[@id="minutes"])[1]',
-      senconds: '(//*[@id="seconds"])[1]',
-      ampm: '//*[@id="radix-:ro:"]/div[2]/div[1]/div/div[5]/div/button'
+      hours: '//*[normalize-space()="Start time"]/ancestor::div[@class="px-3"]/descendant::input[@id="12hours"]',
+      minutes: '//*[normalize-space()="Start time"]/ancestor::div[@class="px-3"]/descendant::input[@id="minutes"]',
+      senconds: '//*[normalize-space()="Start time"]/ancestor::div[@class="px-3"]/descendant::input[@id="seconds"]',
+      ampm: '//*[normalize-space()="Start time"]/ancestor::div[@class="px-3"]/descendant::button[@role="combobox"]'
    }
 
    //End time
    this.endTime = {
-      hours: '(//*[@id="12hours"])[2]',
-      minutes: '(//*[@id="minutes"])[2]',
-      senconds: '(//*[@id="seconds"])[2]',
-      ampm: '//*[@id="radix-:ro:"]/div[2]/div[2]/div/div[5]/div/button'
+      hours: '//*[normalize-space()="End time"]/ancestor::div[@class="px-3"]/descendant::input[@id="12hours"]',
+      minutes: '//*[normalize-space()="End time"]/ancestor::div[@class="px-3"]/descendant::input[@id="minutes"]',
+      senconds: '//*[normalize-space()="End time"]/ancestor::div[@class="px-3"]/descendant::input[@id="seconds"]',
+      ampm: '//*[normalize-space()="End time"]/ancestor::div[@class="px-3"]/descendant::button[@role="combobox"]'
    }
 
    //Left month title
-   this.leftMonthTitle = '//div[@class="space-y-4 rdp-caption_start"]//div//div[1]'
+   this.leftMonthTitle = '//div[@id="react-day-picker-1"]'
 
    //Right month title
-   this.rightMonthTitle = '//div[@class="space-y-4 rdp-caption_end"]//div//div[1]'
+   this.rightMonthTitle = '//div[@id="react-day-picker-2"]'
 
    //Go to previous month button
-   this.goToPreviousMonth = 'Go to previous month';
+   this.goToPreviousMonth = '//button[@aria-label="Go to previous month"]';
 
    //Go to next month button
-   this.goToNextMonth = 'Go to next month';
+   this.goToNextMonth = '//button[@aria-label="Go to next month"]';
 
    //Left date table
-   this.leftDateTable = '//*[@id="radix-:ro:"]/div[1]/div/div[1]/table/tbody'
+   this.leftDateTable = '//div[contains(@class,"rdp-caption_start")]/table/tbody'
 
    //Right date table
-   this.rightDateTable = '//*[@id="radix-:ro:"]/div[1]/div/div[2]/table/tbody'
+   this.rightDateTable = '//div[contains(@class,"rdp-caption_end")]/table/tbody'
 
    //Time filter button
-   this.timeFilter = '//*[@id="__next"]/div/div/main/main/div/div[2]/div/div[1]/button[2]'
+   this.timeFilter = '//button[@data-sentry-source-file="date-range-dropdowns.tsx"]'
 
    //Colums filter button
-   this.columnsFilter = '//*[@id="__next"]/div/div/main/main/div/div[2]/div/div[2]/button';
+   this.columnsFilter = '//button[@data-sentry-source-file="filter-builder.tsx"]'
 
    //Column filter rows
-   this.columnsFilterRows = '//*[@id="radix-:rq:"]//table/tbody/tr'
+   this.columnsFilterRows = `//table[@class='table-auto']/tbody/tr`
 
    //Add filter button
-   this.addFilterButton = '//*[@id="radix-:rq:"]/button'
+   this.addFilterButton = '//button[normalize-space()="Add filter"]'
 
    //Users left menu button
-   this.usersButton = '//*[@id="__next"]/div/div/div/div[2]/div/div[2]/div[1]/ul/li[4]/a'
+   this.usersButton = '//*[@class="group/menu-item relative" and normalize-space()="Users"]'
 
    }
 
@@ -119,11 +119,11 @@ export class dashBoard_ob {
    }
 
    LEFTDATE(date : string){
-      return `//div[@class="space-y-4 rdp-caption_start"]//table/tbody//tr[td/button[normalize-space()="${date}"]]//td/button[normalize-space()="${date}" and not(contains(@class, 'day-outside'))]`
+      return this.leftDateTable + `/tr[td/button[normalize-space()="${date}"]]//td/button[normalize-space()="${date}" and not(contains(@class, 'day-outside'))]`
    }
 
    RIGHTDATE(date : string){
-      return `//div[@class="space-y-4 rdp-caption_end"]//table/tbody//tr[td/button[normalize-space()="${date}"]]//td/button[normalize-space()="${date}" and not(contains(@class, 'day-outside'))]`
+      return this.rightDateTable + `/tr[td/button[normalize-space()="${date}"]]//td/button[normalize-space()="${date}" and not(contains(@class, 'day-outside'))]`
    }
 
 }

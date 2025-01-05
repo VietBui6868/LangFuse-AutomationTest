@@ -91,11 +91,11 @@ export const dashboardActions = {
             if(dateExpectedMonthYear > currentMonthYear)
             {
                 //Click move to next month
-                await lib.clickByLabel(page,dashboardLocators.goToNextMonth);
+                await lib.click(page,dashboardLocators.goToNextMonth);
             }
             else{
                 //Click move to previous month
-                await lib.clickByLabel(page,dashboardLocators.goToPreviousMonth);
+                await lib.click(page,dashboardLocators.goToPreviousMonth);
             }
             currentMonthYearText = await lib.elementTextContent(page, leftMonthTitleLocator);
         }while(currentMonthYearText !== expectedMonthYear)
@@ -112,11 +112,11 @@ export const dashboardActions = {
             if(dateExpectedMonthYear > currentMonthYear)
             {
                 //Click move to next month
-                await lib.clickByLabel(page,dashboardLocators.goToNextMonth);
+                await lib.click(page,dashboardLocators.goToNextMonth);
             }
             else{
                 //Click move to previous month
-                await lib.clickByLabel(page,dashboardLocators.goToPreviousMonth);
+                await lib.click(page,dashboardLocators.goToPreviousMonth);
             }
             currentMonthYearText = await lib.elementTextContent(page, rightMonthTitleLocator);
         }while(currentMonthYearText !== expectedMonthYear)
