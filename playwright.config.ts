@@ -22,6 +22,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
   use: {
+    screenshot: 'only-on-failure',
     trace: 'on-first-retry',
   },
 
@@ -33,7 +34,7 @@ export default defineConfig({
       name: 'chromium',
       use: { 
         ...devices['Desktop Chrome'],
-        launchOptions: {args: ['--headless=chrome']},
+        // launchOptions: {args: ['--headless=chrome']},
         // Use prepared auth state.
         storageState: 'Authentication/.auth/user.json',
        },

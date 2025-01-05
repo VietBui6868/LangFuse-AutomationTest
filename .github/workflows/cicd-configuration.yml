@@ -19,35 +19,54 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+
     - run: npm ci
+
     - run: npx playwright install
+
     - name: Executing TDD Automation test
       run: npm run test
       continue-on-error: true
+
     - name: Upload report artifact
       uses: actions/upload-artifact@v4
+      id: upload-report-artifact
       with:
         name: report
-        path: playwright-report/index.html
+        path: playwright-report/
+
+    - name: Set ARTIFACT_URL variable
+      run: echo "ARTIFACT_URL=${{ steps.upload-report-artifact.outputs.artifact-url }}" >> $GITHUB_ENV
+
     - name: Send report to Teams
       run: |
         WEBHOOK_URL="${{ secrets.TEAMS_WEBHOOK_URL }}"
         TRIGGER_TYPE="${{ github.event_name }}"
         COMMIT_MESSAGE="${{ github.event.head_commit.message }}"
-        ARTIFACT_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+        RUN_ID_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
         # Read the test result status from the JSON file
         TEST_STATUS=$(jq -r '.status' test-results/.last-run.json)
+
+        if [ "$TEST_STATUS" == "passed" ]; then
+            COLOR="00FF00" # Green
+            RESULT="Passed"
+          else
+            COLOR="FF0000" # Red
+            RESULT="Failed"
+          fi
 
         curl -H "Content-Type: application/json" -d "{
           \"text\": \"<h2>Build Report</h2>
                    <p><strong>Action:</strong> ${TRIGGER_TYPE}</p>
                    <p><strong>Commit:</strong> ${COMMIT_MESSAGE}</p>
-                   <p><strong>Status:</strong> ${TEST_STATUS}</p>
-                   <p><a href='${ARTIFACT_URL}'>See more details</a></p>\"
+                   <p style=\"color:'"$COLOR"';\">"'"$RESULT"'</p>
+                   <p><a href='${ARTIFACT_URL}'>Download report</a></p>
+                   <p><a href='${RUN_ID_URL}'>See more details</a></p>\"
         }" $WEBHOOK_URL

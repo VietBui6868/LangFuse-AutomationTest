@@ -46,10 +46,12 @@ export class lib {
 
 
     static async click(page: Page, locator: string) {
+        await page.locator(locator).waitFor({state: 'visible'});
         await page.locator(locator).click();
     }
 
     static async clickByLabel(page: Page, label: string) {
+        await page.getByLabel(label).waitFor({state: 'visible'});
         await page.getByLabel(label).click();
     }
 
