@@ -55,12 +55,12 @@ jobs:
         TEST_STATUS=$(jq -r '.status' test-results/.last-run.json)
 
         if [ "$TEST_STATUS" == "passed" ]; then
-            COLOR="00FF00" # Green
-            RESULT="Passed"
-          else
-            COLOR="FF0000" # Red
-            RESULT="Failed"
-          fi
+          COLOR="00FF00" # Green
+          RESULT="Passed"
+        else
+          COLOR="FF0000" # Red
+          RESULT="Failed"
+        fi
 
         curl -H "Content-Type: application/json" -d "{
           \"text\": \"<h2>Build Report</h2>
