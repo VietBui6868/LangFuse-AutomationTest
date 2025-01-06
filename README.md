@@ -8,6 +8,9 @@ This project demonstrates best practices for Test-Driven Development (TDD) using
 ## Project Structure
 
 TDD_BestPractice/
+├── .github/
+│   ├── workflows/
+│       └── cicd-configuration.yml
 ├── Authentication/
 │   └── .auth/
 │       └── user.json
@@ -48,6 +51,9 @@ TDD_BestPractice/
 
 3. **View Test Report**:
    npm run report
+
+## CICD Configuration
+    The CICD configuration is defined in cicd-configuration.yml. It includes settings for triggers, environment, and job details.
 
 ## Authentication
     The project uses a pre-saved authentication state stored in user.json. This file contains cookies and local storage data to maintain the session state across tests.
