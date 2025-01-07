@@ -6,36 +6,35 @@ This project demonstrates best practices for Test-Driven Development (TDD) using
    Test: https://cloud.langfuse.com/project/clkpwwm0m000gmm094odg11gi
 
 ## Project Structure
-
+```
 TDD_BestPractice/
 ├── .github/
-│   ├── workflows/
-│       └── cicd-configuration.yml
+│ ├── workflows/
+│ └── cicd-configuration.yml
 ├── Authentication/
-│   └── .auth/
-│       └── user.json
+│ └── .auth/
+│ └── user.json
 ├── tests/
-│   ├── action/
-│   │   ├── dashboard_action.ts
-│   │   └── login_action.ts
-│   ├── lib/
-│   │   ├── common.ts
-│   │   ├── lib.ts
-│   │   └── logger.ts
-│   ├── pageObjects/
-│   │   ├── dashboard_ob.ts
-│   │   └── login_ob.ts
-│   └── spec/
-│       ├── dashboard.spec.ts
-│       └── login.setup.spec.ts
+│ ├── action/
+│ │ ├── dashboard_action.ts
+│ │ └── login_action.ts
+│ ├── lib/
+│ │ ├── common.ts
+│ │ ├── lib.ts
+│ │ └── logger.ts
+│ ├── pageObjects/
+│ │ ├── dashboard_ob.ts
+│ │ └── login_ob.ts
+│ └── spec/
+│ ├── dashboard.spec.ts
+│ └── login.setup.spec.ts
 ├── testSites/
-│   └── sites.ts
+│ └── sites.ts
 ├── .gitignore
 ├── package.json
 ├── playwright.config.ts
-├── README.md
-
-
+└── README.md
+```
 ## Libraries Used
 
 - **Playwright**: For end-to-end testing.
@@ -62,7 +61,7 @@ TDD_BestPractice/
     The Playwright configuration is defined in playwright.config.ts. It includes settings for different browsers, test directories, and other options.
 
 ## Writing Tests
-**Actions** : Define user actions in action.
-**Page Objects** : Define page elements and locators in pageObjects.
-**Specifications** : Write test cases in spec.
+1.   **Actions** : Define user actions in action.
+2.   **Page Objects** : Define page elements and locators in pageObjects.
+3.   **Specifications** : Write test cases in spec.
    
