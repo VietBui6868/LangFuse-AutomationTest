@@ -1,4 +1,4 @@
-# TDD_BestPractice
+# LangFuse-AutomationTest
 
 This project demonstrates best practices for Test-Driven Development (TDD) using Playwright for end-to-end testing. The project includes various test cases for login and dashboard functionalities.
 
